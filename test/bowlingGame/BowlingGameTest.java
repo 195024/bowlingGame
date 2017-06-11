@@ -44,12 +44,16 @@ public class BowlingGameTest {
 
 	@Test
 	public void testOneStrike() {
-		g.roll(10);
+		rollStrike();
 		g.roll(5);
 		g.roll(4);
 		rollMany(16, 0);
 		
 		assertEquals(28, g.score());
+	}
+
+	private void rollStrike() {
+		g.roll(10);
 	}
 	
 	private void rollSpare() {
